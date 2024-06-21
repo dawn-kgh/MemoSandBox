@@ -16,6 +16,7 @@ class ApplicationConvention : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
                 apply("io.dawn.compose")
                 apply("io.dawn.hilt")
+                apply("io.dawn.test")
             }
 
             configure<ApplicationExtension> {

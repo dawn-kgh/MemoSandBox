@@ -35,6 +35,7 @@ class ComposeConvention : Plugin<Project> {
             }
 
             dependencies {
+                libs.implementation("app.cash.molecule")
                 libs.implementation("androidx.compose.foundation")
                 libs.implementation("androidx.compose.runtime")
                 libs.implementation("androidx.compose.ui")

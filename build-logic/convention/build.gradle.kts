@@ -34,6 +34,10 @@ gradlePlugin {
             implementationClass = "io.dawn.gradle.plugin.module.AndroidLibraryConvention"
         }
 
+        register("io.dawn.core") {
+            id = "io.dawn.core"
+            implementationClass = "io.dawn.gradle.plugin.module.CoreConvention"
+        }
       /*  register("io.dawn.domain") {
             id = "io.dawn.DomainModule"
             implementationClass = "io.dawn.gradle.plugin.module.DomainConvention"
@@ -42,11 +46,6 @@ gradlePlugin {
         register("io.dawn.data") {
             id = "io.dawn.DataModule"
             implementationClass = "io.dawn.gradle.plugin.module.DataConvention"
-        }
-
-        register("io.dawn.core") {
-            id = "io.dawn.CoreModule"
-            implementationClass = "io.dawn.gradle.plugin.module.CoreConvention"
         }
 
         register("io.dawn.macrobenchmark") {
@@ -62,6 +61,11 @@ gradlePlugin {
         register("io.dawn.hilt") {
             id = "io.dawn.hilt"
             implementationClass = "io.dawn.gradle.plugin.feature.HiltConvention"
+        }
+
+        register("io.dawn.test") {
+            id = "io.dawn.test"
+            implementationClass = "io.dawn.gradle.plugin.feature.TestConvention"
         }
     }
 }

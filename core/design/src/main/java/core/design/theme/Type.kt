@@ -1,4 +1,4 @@
-package io.dawn.sandbox.ui.theme
+package core.design.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

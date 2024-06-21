@@ -1,0 +1,8 @@
+plugins {
+    id("io.dawn.core")
+    id("io.dawn.compose")
+}
+
+android {
+    namespace "core.design"
+}

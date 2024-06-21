@@ -23,5 +23,7 @@ dependencyResolutionManagement {
 rootProject.name = "SandBox"
 include(
     ":app",
+    ":core:design",
+    ":presentation:main:api",
+    ":presentation:main:impl"
 )
- 

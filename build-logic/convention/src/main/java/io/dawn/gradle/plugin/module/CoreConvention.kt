@@ -17,7 +17,7 @@ class CoreConvention : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
                 apply("kotlin-parcelize")
                 apply("kotlinx-serialization")
-                apply("kakao.wheel.HiltConvention")
+                apply("io.dawn.hilt")
             }
 
             configure<LibraryExtension> {

@@ -60,6 +60,12 @@ internal fun VersionCatalog.testImplementation(libraryAlias: String): Unit =
     }
 
 context(DependencyHandlerDelegate)
+internal fun VersionCatalog.androidTestImplementation(libraryAlias: String): Unit =
+    findLibrary(libraryAlias).ifPresent { provider ->
+        add("androidTestImplementation", provider)
+    }
+
+context(DependencyHandlerDelegate)
 internal fun VersionCatalog.bundleAndroidTestImplementation(bundleName: String): Unit =
     findBundle(bundleName).ifPresent { provider ->
         add("androidTestImplementation", provider)

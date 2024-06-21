@@ -19,42 +19,17 @@ class AndroidLibraryConvention : Plugin<Project> {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
                 apply("kotlin-parcelize")
-                apply("kakao.wheel.ComposeConvention")
-                apply("kakao.wheel.HiltConvention")
+                apply("io.dawn.compose")
+                apply("io.dawn.hilt")
             }
 
             configure<LibraryExtension> {
                 configVersionAndSdk()
                 configBuildFeatures()
-
-                buildFeatures {
-                    viewBinding = true
-                    dataBinding = true
-                }
             }
 
             dependencies {
-                implementation(project(":meteor:library:base"))
-                implementation(project(":meteor:userinterface:base"))
-                implementation(project(":meteor:userinterface:design"))
-                implementation(project(":domain:base"))
-                implementation(project(":domain:root"))
-                implementation(project(":data:call-api"))
-                implementation(project(":data:common-api"))
-                implementation(project(":data:location-api"))
-                implementation(project(":data:driver-api"))
-                implementation(project(":data:connection-api"))
-                implementation(project(":data:driving:api"))
-                implementation(project(":core:resource"))
-
-                implementation(project(":core:network:api"))
-                implementation(project(":core:base:api"))
-                implementation(project(":core:coroutine:api"))
-                implementation(project(":meteor:userinterface:camera"))
-                implementation(project(":meteor:userinterface:callcard"))
-                testImplementation(project(":core:test"))
-
-                libs.bundleImplementation("android.library.common")
+                implementation(project(":core:design"))
             }
         }
     }

@@ -1,4 +1,4 @@
-package io.dawn.sandbox.ui.theme
+package core.design.theme
 
 import androidx.compose.ui.graphics.Color
 
