@@ -18,6 +18,7 @@ class CoreConvention : Plugin<Project> {
                 apply("kotlin-parcelize")
                 apply("kotlinx-serialization")
                 apply("io.dawn.hilt")
+                apply("io.dawn.test")
             }
 
             configure<LibraryExtension> {

@@ -44,8 +44,7 @@ internal fun BaseExtension.configVersionAndSdk() {
                 "${rootProject.projectDir}/proguard/kotlin-serialization-proguard-rules.pro",
                 "${rootProject.projectDir}/proguard/coroutines-proguard-rules.pro",
                 "${rootProject.projectDir}/proguard/network-proguard-rules.pro",
-                "${rootProject.projectDir}/proguard/android-proguard-rules.pro",
-                "${rootProject.projectDir}/proguard/kakao-proguard-rules.pro"
+                "${rootProject.projectDir}/proguard/android-proguard-rules.pro"
             )
         }
 

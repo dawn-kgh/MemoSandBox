@@ -43,6 +43,7 @@ class ComposeConvention : Plugin<Project> {
                 libs.implementation("androidx.compose.ui.tooling.preview")
                 libs.implementation("androidx.compose.material3")
                 libs.implementation("androidx.activity.compose")
+                libs.implementation("androidx.navigation.compose")
             }
         }
     }

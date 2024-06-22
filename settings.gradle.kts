@@ -25,5 +25,7 @@ include(
     ":app",
     ":core:design",
     ":presentation:main:api",
-    ":presentation:main:impl"
+    ":presentation:main:impl",
+    ":navigation:api",
+    ":navigation:impl"
 )

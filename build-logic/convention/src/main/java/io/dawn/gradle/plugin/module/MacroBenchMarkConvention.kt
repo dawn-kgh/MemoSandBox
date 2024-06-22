@@ -21,7 +21,7 @@ class MacroBenchMarkConvention : Plugin<Project> {
             configure<TestExtension> {
                 configVersionAndSdk()
 
-                namespace = "com.kakao.wheel.driver.macrobenchmark"
+                namespace = "io.dawn.macrobenchmark"
 
                 defaultConfig {
                     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

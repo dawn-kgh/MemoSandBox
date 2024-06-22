@@ -21,6 +21,7 @@ class AndroidLibraryConvention : Plugin<Project> {
                 apply("kotlin-parcelize")
                 apply("io.dawn.compose")
                 apply("io.dawn.hilt")
+                apply("io.dawn.test")
             }
 
             configure<LibraryExtension> {
