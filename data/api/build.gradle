@@ -1,0 +1,8 @@
+plugins {
+    id("io.dawn.data")
+    id("io.dawn.room")
+}
+
+android {
+    namespace = "io.dawn.data.api"
+}

@@ -24,8 +24,9 @@ rootProject.name = "SandBox"
 include(
     ":app",
     ":core:design",
-    ":presentation:main:api",
-    ":presentation:main:impl",
+    ":presentation:main",
     ":navigation:api",
-    ":navigation:impl"
+    ":navigation:impl",
+    ":data:api",
+    ":data:impl"
 )

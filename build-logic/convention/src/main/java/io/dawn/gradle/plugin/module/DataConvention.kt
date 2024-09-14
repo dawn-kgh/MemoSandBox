@@ -17,7 +17,7 @@ class DataConvention : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
                 apply("kotlin-parcelize")
                 apply("kotlinx-serialization")
-                apply("io.dawn.HiltConvention")
+                apply("io.dawn.hilt")
             }
 
             configure<LibraryExtension> {
@@ -25,11 +25,6 @@ class DataConvention : Plugin<Project> {
             }
 
             dependencies {
-                implementation(project(":core:base:api"))
-                implementation(project(":core:coroutine:api"))
-                implementation(project(":core:coroutine:api"))
-                implementation(project(":core:network:api"))
-
                 libs.implementation("firebase.crashlytics.ktx")
                 libs.implementation("firebase.messaging.ktx")
 
@@ -37,11 +32,7 @@ class DataConvention : Plugin<Project> {
                 libs.implementation("kotlinx.coroutine.android")
                 libs.implementation("kotlinx.serialization")
 
-                libs.implementation("ktor.core")
-
                 libs.implementation("androidx.datastore")
-
-                libs.implementation("legacy.guava")
             }
         }
     }

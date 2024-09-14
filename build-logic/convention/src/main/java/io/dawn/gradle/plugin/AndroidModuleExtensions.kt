@@ -41,10 +41,7 @@ internal fun BaseExtension.configVersionAndSdk() {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
             consumerProguardFiles(
                 "proguard-rules.pro",
-                "${rootProject.projectDir}/proguard/kotlin-serialization-proguard-rules.pro",
-                "${rootProject.projectDir}/proguard/coroutines-proguard-rules.pro",
-                "${rootProject.projectDir}/proguard/network-proguard-rules.pro",
-                "${rootProject.projectDir}/proguard/android-proguard-rules.pro"
+                "${rootProject.projectDir}/proguard/proguard-rules.pro",
             )
         }
 

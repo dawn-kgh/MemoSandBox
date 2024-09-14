@@ -1,5 +1,6 @@
 package io.dawn.gradle.plugin
 
+import com.android.build.api.dsl.CommonExtension
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.LibraryExtension
 import com.google.devtools.ksp.gradle.KspExtension
@@ -105,5 +106,12 @@ internal fun Project.applyKsp(kspExtensionConfiguration: KspExtension.() -> Unit
                 }
             }
         }
+    }
+}
+
+context(Project)
+internal fun CommonExtension<*,*,*,*,*,*>.applyRoom() {
+    extensions.configure<KspExtension> {
+        arg("room.schemaLocation", "${projectDir}/schemas")
     }
 }

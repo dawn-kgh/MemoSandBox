@@ -10,6 +10,7 @@ kotlin {
 }
 
 dependencies {
+    implementation(libs.androidx.room.gradle.plugin)
     compileOnly(libs.buildscript.android.gradle)
     compileOnly(libs.buildscript.kotlin.gradle)
     compileOnly(libs.buildscript.google.ksp)
@@ -43,16 +44,18 @@ gradlePlugin {
             implementationClass = "io.dawn.gradle.plugin.module.DomainConvention"
         }
 
-        register("io.dawn.data") {
-            id = "io.dawn.DataModule"
-            implementationClass = "io.dawn.gradle.plugin.module.DataConvention"
-        }
+
 
         register("io.dawn.macrobenchmark") {
             id = "io.dawn.MacroBenchMark"
             implementationClass = "io.dawn.gradle.plugin.module.MacroBenchMarkConvention"
         }
 */
+        register("io.dawn.data") {
+            id = "io.dawn.data"
+            implementationClass = "io.dawn.gradle.plugin.module.DataConvention"
+        }
+
         register("io.dawn.compose") {
             id = "io.dawn.compose"
             implementationClass = "io.dawn.gradle.plugin.feature.ComposeConvention"
@@ -66,6 +69,11 @@ gradlePlugin {
         register("io.dawn.test") {
             id = "io.dawn.test"
             implementationClass = "io.dawn.gradle.plugin.feature.TestConvention"
+        }
+
+        register("io.dawn.room") {
+            id = "io.dawn.room"
+            implementationClass = "io.dawn.gradle.plugin.feature.RoomConvention"
         }
     }
 }

@@ -4,6 +4,5 @@ plugins {
 
 dependencies {
     implementation(project(":core:design"))
-    implementation(project(":presentation:main:api"))
-    runtimeOnly(project(":presentation:main:impl"))
+    implementation(project(":presentation:main"))
 }
