@@ -108,10 +108,3 @@ internal fun Project.applyKsp(kspExtensionConfiguration: KspExtension.() -> Unit
         }
     }
 }
-
-context(Project)
-internal fun CommonExtension<*,*,*,*,*,*>.applyRoom() {
-    extensions.configure<KspExtension> {
-        arg("room.schemaLocation", "${projectDir}/schemas")
-    }
-}
